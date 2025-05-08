@@ -1,0 +1,83 @@
+.bookDetails {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.bookInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.bookInput select,
+.bookInput input {
+  padding: 10px 15px;
+  width: 30vw;
+}
+
+.bookInput label img {
+  max-width: 150px; 
+  max-height: 150px;  
+  object-fit: cover;  
+  padding: 10px;  
+}
+
+
+.submit-book {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.book-submit-btn {
+  padding: 15px;
+  width: 30%;
+}
+
+@media(max-width:768px){
+  .bookInput select,
+.bookInput input {
+  width: 50vw;
+}
+
+.book-submit-btn {
+  width: 50%;
+}
+}
+
+
+@media (max-width: 600px) {
+  .bookInput {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .bookInput select,
+  .bookInput input {
+    width: 65vw;
+  }
+
+  .bookUpload{
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .bookUpload img{
+    height: 6rem;
+  }
+
+  .book-submit-btn {
+    width: 70%;
+    padding: 12px 5vw;
+  }
+}
+

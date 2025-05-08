@@ -1,0 +1,72 @@
+.achievementDetails {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.achievementInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.achievementInput label img {
+  max-width: 150px; 
+  max-height: 150px;  
+  object-fit: cover;  
+  padding: 10px;  
+}
+
+.achievementInput select,
+.achievementInput input{
+  padding: 10px 15px;
+  width: 30vw;
+}
+
+.submit-achievement {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.achievement-submit-btn {
+  padding: 15px;
+  width: 30%;
+}
+
+@media(max-width:768px){
+  .achievementInput select,
+  .achievementInput input {
+    width: 50vw;
+  }
+  
+  .achievement-submit-btn {
+    width: 50%;
+  }
+  }
+  
+
+@media (max-width: 600px) {
+  .achievementInput {
+    flex-direction: column;
+    gap: 15px;
+  }
+.achievementInput select,
+.achievementInput input {
+    width: 65vw;
+  }
+
+  .achievement-submit-btn {
+    width: 70%; 
+    padding: 12px 5vw;
+  }
+}
+

@@ -1,0 +1,102 @@
+.pendingStatus {
+  width: 80%;
+  margin: 0 auto;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+}
+
+.pendingContainer {
+  padding: 40px;
+  width: 100%;
+  border: 2px solid #49557e;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pendingDate {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  color: #49557e;
+  align-items: center;
+  font-size: 16px;
+  flex-wrap: wrap; 
+}
+
+.pendingDate select {
+  padding: 10px 30px;
+  border: none;
+  outline: 1px solid #49557e;
+  margin-left: 5px;
+}
+
+.pending-btn {
+  padding: 10px 30px;
+  font-size: 16px;
+  color: #49557e;
+  border: none;
+  background: transparent;
+  outline: 1px solid tomato;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.pending-btn:hover {
+  background-color: tomato;
+}
+
+.pendingTable {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-y: auto;
+}
+
+.pendingHeading th,
+.pendingData td {
+  border: 1px solid #49557e;
+  padding: 10px 1.5vw;
+  text-align: left;
+  min-width: 100px;
+  max-width: 20vw; 
+}
+
+@media (max-width: 900px) {
+  .pendingStatus {
+    width: 90%;
+    margin: auto;
+    z-index: 0; 
+  }
+
+  .pendingHeading th,
+  .pendingData td {
+    padding: 8px 1vw;
+  }
+
+  .pendingDate {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .pendingHeading th,
+  .pendingData td {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .pendingHeading th,
+  .pendingData td {
+    padding: 5px 1vw; 
+    font-size: 14px; 
+  }
+
+  .pendingDate {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

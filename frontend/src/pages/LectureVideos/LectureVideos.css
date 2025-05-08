@@ -1,0 +1,27 @@
+.lectureVideosDetails{
+display: flex;
+justify-content: center;
+align-items: center;
+height:calc(100vh - 80px);
+width: 100%;
+}
+
+.lectureVideosContainer iframe{
+  height:40vw;
+  width: 60vw;
+  border-radius: 0; 
+}
+
+@media(max-width:768px){
+  .lectureVideosContainer iframe{
+    height:60vw;
+    width: 70vw;
+  }
+}
+
+@media(max-width:600px){
+  .lectureVideosContainer iframe{
+    height:70vw;
+    width: 90vw;
+  }
+}

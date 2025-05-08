@@ -1,0 +1,114 @@
+.lectureDashboardDetails{
+  display: flex;
+  justify-content: center;
+}
+
+.formArea{
+  position: absolute;
+  left: 0;
+}
+
+.lecturebar{
+  cursor: pointer;
+  position: absolute;
+  margin: 10px;
+  background-color: #ddd;
+  font-size: 3rem;
+  font-weight: 800;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+.lectureDashboard {
+  width: 280px;
+  height: calc(100vh - 80px);
+  border: 2px solid #49557e;
+  border-top: none;
+  border-left: none;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  display: none;
+
+}
+
+.lectureDashboard.show{
+  display: block;
+}
+
+.lectureDashboard label {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding:10px 0;
+}
+
+.lectureDashboard label input {
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  width: 80%;
+}
+
+.lectureSearch_icon{
+  font-size: 20px;
+  color: #49557e;
+  font-weight: 800;
+  cursor: pointer;
+  padding-left: 6px;
+}
+
+.lectureCrossbar{
+  font-size: 20px;
+  cursor: pointer;
+  padding-right: 6px;
+}
+
+.lectureDashboard-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.lectureDashboard-btn {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  width: 100%;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lectureDashboard-btn:hover {
+  background-color: #F5931E;
+}
+
+.lectureUnitsName {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 15px;
+  overflow-y: auto;
+  height: 10rem;
+  margin: 0; 
+  border-top: none;
+}
+
+.unitsHeading{
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+.lectureUnitsName button{
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 0;
+  width: 100%;
+  text-align: left;
+}

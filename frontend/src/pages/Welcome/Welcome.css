@@ -1,0 +1,29 @@
+.welcome {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: max(4vw, 30px); 
+  font-weight: 800;
+  text-align: center; 
+  padding: 0 20px; 
+}
+
+@media (min-width: 768px) {
+  .welcome {
+    font-size: max(3vw, 50px); 
+  }
+}
+
+@media (min-width: 1200px) {
+  .welcome {
+    font-size: max(2vw, 60px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome {
+    font-size: 8vw; 
+  }
+}

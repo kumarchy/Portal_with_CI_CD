@@ -1,0 +1,57 @@
+.fee-details{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: calc(100vh - 80px);
+ width: 100%;
+}
+
+.upload-fee-input{
+ display: flex;
+ gap: max(3vw, 2rem);
+ margin-top: 20px;
+}
+
+select,.upload-fee-input input{
+  padding: 10px 15px;
+  width: 24vw;
+}
+
+.submit-fee{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.submit-btn-fee{
+  padding: 15px; 
+  width: 100%;
+  width: 20rem;
+}
+
+@media(max-width:600px){
+
+  .fee-details form{
+    overflow-y: scroll;
+    height: 80%;
+  }
+
+  .fee-details form::-webkit-scrollbar{
+    display: none;
+  }
+
+  .upload-fee-input{
+    flex-direction: column;
+    gap:15px;
+
+  }
+
+  select,.upload-fee-input input{
+    width: 65vw;
+  }
+
+  .submit-btn-fee{
+    width: 70%;
+    padding: 12px 5vw;
+  }
+}

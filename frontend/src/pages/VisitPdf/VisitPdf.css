@@ -1,0 +1,16 @@
+.lectureNotesDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+}
+
+.lectureNotes {
+  height: 80vh;
+  width: 80%;
+}
+
+.lectureNotes iframe {
+  border: none;
+  border-radius: 0; 
+}

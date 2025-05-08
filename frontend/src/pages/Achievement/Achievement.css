@@ -1,0 +1,107 @@
+.achievementDetails {
+  width: 80%;
+  position: relative;
+  z-index: 0;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+}
+
+.achievement_logo_icon {
+  width: 15%;
+  height: 15%;
+}
+
+.achievementContainer {
+  padding: 40px;
+  width: 100%;
+  border: 2px solid #49557e;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.achievementSelectOption {
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.achievementSelectOption select {
+  padding: 10px 30px;
+}
+
+.achievementEnter-btn {
+  padding: 10px 50px;
+}
+
+.achievementCollection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  overflow-y: scroll;
+  height: 15rem;
+  padding: 10px; 
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.achievementPrize {
+  height: 200px;
+  width: 200px;
+}
+
+.achievement_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+  box-sizing: border-box;
+}
+
+.achievement_img img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .achievementDetails {
+    width: 90%;
+    margin: auto;
+    z-index: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .achievementDetails {
+    gap: 2%;
+  }
+
+  .achievementSelectOption {
+    gap: 10%;
+  }
+
+  .achievementPrize {
+    width: 100%;
+    height: 100%;
+  }
+
+  .achievement_img {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 540px) {
+  .achievementSelectOption {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

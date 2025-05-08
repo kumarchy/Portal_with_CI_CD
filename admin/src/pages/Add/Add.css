@@ -1,0 +1,54 @@
+/* .add{
+   width:100%;
+   position: relative;
+   top:4rem;
+}
+
+.upload{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top:2rem;
+}
+
+.upload-section{
+ display: flex;
+ gap:max(5vw,20px);
+ justify-content: center;
+}
+
+.upload-btn {
+  padding: 15px 5vw; 
+}
+
+@media (max-width: 900px) { 
+  .upload-btn {
+    padding: 15px 3vw; 
+  }
+}
+
+@media (max-width: 600px) { 
+  .upload{
+    gap: 15px;
+  }
+  
+  .upload-section{
+    margin-top: 1.5rem;
+    gap:10rem;
+    margin-top: 0px;
+   }
+
+  .upload-btn {
+    padding: 12px 5vw; 
+    width:70%;
+  }
+
+  .upload-section{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3vw;
+  }
+}
+
+ */

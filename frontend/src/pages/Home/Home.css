@@ -1,0 +1,148 @@
+.school-pic {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: url('/homePage_img.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.school-pic::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  margin-left: 30px;
+}
+
+.container h1, .container h4, .container p, .container label {
+  color: white;
+}
+
+/* Heading */
+.schoolName {
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: clamp(24px, 5vw, 48px);
+  background-color: blue;
+  display: inline-block;
+  padding: 10px 30px;
+}
+
+/* Subheading */
+.heading {
+  font-size: clamp(20px, 4vw, 36px);
+  margin-top: 10px;
+  text-align: left; 
+}
+
+/* Quality message */
+.qualityMessage {
+  font-size: clamp(14px, 2vw, 20px);
+  margin-top: 20px;
+  text-align: left; 
+}
+
+/* Core values */
+.coreValues {
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 700;
+  background-color: #f5931e;
+  display: inline-block;
+  padding:10px 10%;
+  margin-top: 20px;
+  text-align: left; 
+}
+
+/* Values list */
+.values {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin-top: 15px;
+  justify-content: flex-start; 
+}
+
+.values p {
+  background-color: rgb(123, 176, 223);
+  padding: 5px 10px;
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+
+.contact {
+  margin-top: 10px;
+  font-size: clamp(14px, 2vw, 18px);
+  width: 88%;
+  text-align: left;
+}
+
+.location {
+  color: brown;
+  font-size: 25px;
+}
+
+.gmail {
+  color: brown;
+  font-size: 20px;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 900px) {
+  .values {
+    gap: 1.5rem;
+  }
+
+  .school-pic{
+    height: 91.5vh;
+  }
+
+  .school-pic::before {
+    height: 91.5vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    align-items: center; 
+    margin-left: 0;
+  }
+
+  .qualityMessage,
+  .heading {
+    text-align: center; 
+    width: 100%;
+  }
+
+  .qualityMessage {
+    margin-top: 15px;
+  }
+
+  .coreValues {
+    padding:10px 15%; 
+    text-align: center; 
+  }
+
+  .values {
+    flex-direction: column; 
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .contact {
+    text-align: center;
+    margin-top: 20px;
+  }
+}

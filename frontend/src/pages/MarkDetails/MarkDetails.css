@@ -1,0 +1,109 @@
+.marksDetails {
+  width: 80%;
+  position: relative;
+  z-index: 0;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.marksContainer {
+  padding: 40px;
+  width: 100%;
+  border: 2px solid #49557e;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.marksSelectOpton {
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.marksSelectOpton select {
+  padding: 10px 30px;
+}
+
+.marksEnter-btn {
+  padding: 10px 50px;
+  font-size: 16px;
+}
+
+.marksTable {
+  width: 100%;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.marks-status-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 800px;
+  border-spacing: 0;
+}
+
+.marks-status-table td {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.marks-status-table th {
+  position: sticky;
+  top: 0;
+  background-color: #f4f4f4;
+  z-index: 1;
+  padding: 20px 25px;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .marksDetails {
+    width: 90%;
+    margin: auto;
+    z-index: 0;
+  }
+
+  .marksSelectOpton {
+    gap: 10%;
+  }
+
+  .marksEnter-btn {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .marksSelectOpton {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .marks-status-table th {
+    padding: 10px 20px;
+  }
+
+  .marks-status-table td {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .marksSelectOpton {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .marks-status-table {
+    min-width: 600px;
+  }
+}
