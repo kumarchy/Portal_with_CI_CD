@@ -5,7 +5,7 @@ export const connectDB=async()=>{
   //   console.log("DB Connected")
   // );
 
-  await mongoose.connect("mongodb://localhost:27017/Balmiki_Portal").then(()=>
+  await mongoose.connect(process.env.MONGODB_URI).then(()=>
     console.log("DB Connected")
   );
 }
