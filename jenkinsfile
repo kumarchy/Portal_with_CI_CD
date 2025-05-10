@@ -2,8 +2,8 @@ pipeline{
     agent any
 
     environment {
-        MONGO_URI = credentials('MONGO_URI')
-        JWT_SECRET = credentials('JWT_SECRET')   
+        MONGODB_URI = credentials('MONGODB_URI')
+        JWT_SECRET_PORTAL = credentials('JWT_SECRET_PORTAL')   
         PORT = credentials('PORT')
     }
     
@@ -74,8 +74,8 @@ pipeline{
             steps {
                 sh """
                 echo "PORT=${PORT}" > backend/.env
-                echo "JWT_SECRET=${JWT_SECRET}" >> backend/.env
-                echo "MONGO_URI=${MONGO_URI}" >> backend/.env
+                echo "JWT_SECRET=${JWT_SECRET_PORTAL}" >> backend/.env
+                echo "MONGODB_URI=${MONGODB_URI}" >> backend/.env
                 """
 
                 }
@@ -90,8 +90,8 @@ pipeline{
                 
                 // Pass environment variables to docker-compose
                 sh """
-                MONGO_URI="${MONGO_URI}" \\
-                JWT_SECRET="${JWT_SECRET}" \\
+                MONGO_URI="${MONGODB_URI}" \\
+                JWT_SECRET="${JWT_SECRET_PORTAL}" \\
                 PORT="${PORT}" \\
                 docker-compose up -d --build
                 """

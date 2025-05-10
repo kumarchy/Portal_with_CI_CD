@@ -40,12 +40,12 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - ./db_data:/var/data/db
+      - mongodb_data:/data/db
     networks:
       - app-network
-      
+
 volumes:
-  db_data:
+  mongodb_data:
 
 networks:
   app-network:
