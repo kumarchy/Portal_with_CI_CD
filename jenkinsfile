@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
     agent any
 
     environment {
@@ -7,7 +7,7 @@ pipeline{
         PORT = credentials('PORT')
     }
     
-    stages{
+    stages {
         stage('Install Dependencies') {
             steps {
                 sh '''
@@ -48,40 +48,39 @@ pipeline{
             }
         }
 
-        stage('Clone Code'){
+        stage('Clone Code') {
             steps {
                 checkout scm
             }
         }
 
-        stages('Install npm Packages'){
-            steps{
-                dir('frontend'){
+        stage('Install npm Packages') {
+            steps {
+                dir('frontend') {
                     sh 'npm install'
                 }
 
-                dir('backend'){
+                dir('backend') {
                     sh 'npm install'
                 }
                 
-                dir('admin'){
+                dir('admin') {
                     sh 'npm install'
                 }
             }
         }
 
-        stage('Prepare Environment'){
+        stage('Prepare Environment') {
             steps {
                 sh """
                 echo "PORT=${PORT}" > backend/.env
                 echo "JWT_SECRET=${JWT_SECRET_PORTAL}" >> backend/.env
                 echo "MONGODB_URI=${MONGODB_URI}" >> backend/.env
                 """
-
-                }
+            }
         }
 
-        stage('Build & Deploy'){
+        stage('Build & Deploy') {
             steps {
                 sh 'echo "Starting Docker Compose build and deploy..."'
                 
@@ -100,7 +99,7 @@ pipeline{
             }
         }
 
-        stage('Build Docker Images'){
+        stage('Build Docker Images') {
             steps {
                 sh 'docker build -t passwordyoho3/portal:backend-latest ./backend'
                 sh 'docker build -t passwordyoho3/portal:frontend-latest ./frontend'
@@ -108,9 +107,9 @@ pipeline{
             }
         }
 
-        stage('Push Images to DockerHub'){
+        stage('Push Images to DockerHub') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable:'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]){
+                withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable:'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD"
                     sh 'docker push passwordyoho3/portal:backend-latest'
                     sh 'docker push passwordyoho3/portal:frontend-latest'
