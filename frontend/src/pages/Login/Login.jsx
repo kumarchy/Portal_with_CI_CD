@@ -69,9 +69,9 @@ const Login = ({ setShowLogin, type,loginNavigate}) => {
         </div>
 
         <div className='login-inputs'>
-          {currState === "Login" ? null : <input name='name' onChange={onchangeHandler} value={data.name} type="text" placeholder='Your Name' required />}
-          <input name='email' onChange={onchangeHandler} value={data.email} type="email" placeholder='Your email' required />
-          <input name='password' onChange={onchangeHandler} value={data.password} type="password" placeholder='Password' required />
+          {currState === "Login" ? null : <input name='name' onChange={onchangeHandler} value={data.name} type="text" placeholder='Your Name' required autoComplete='name'/>}
+          <input name='email' onChange={onchangeHandler} value={data.email} type="email" placeholder='Your email' required autoComplete='username'/>
+          <input name='password' onChange={onchangeHandler} value={data.password} type="password" placeholder='Password' required autoComplete='current-password'/>
         </div>
         
         <button type='submit'>{currState === "Sign Up" ? "Create account" : "Login"}</button>
