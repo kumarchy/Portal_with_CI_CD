@@ -33,7 +33,7 @@ const Home = () => {
             <p>Responsibility</p>
           </li>
           <p className="contact">
-          <i class="fa-solid fa-location-dot"></i>
+          <i className="fa-solid fa-location-dot"></i>
             <label>Hasanpur, Dhangadi-5, Kailali, Nepal </label>
             <br />
             <label >balmikiintlschool@gmail.com</label>
